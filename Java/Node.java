@@ -13,14 +13,17 @@ public class Node {
     }
 
     public double dot(Node node){
+        // Dot Product between this vector and the passed one
         return x*node.x + y*node.y;
     }
 
     public Node normal() {
+        // The normal of this vector
         return new Node(-1*y, x);
     }
 
     public Node normalize() {
+        // The unit vector of this one
         double d = Math.sqrt(x*x+y*y);
         if(d == 0) {
             d = 1;

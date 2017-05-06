@@ -18,21 +18,25 @@ public class Polygon extends Shape{
     }
 
     public Node[] getAxes() {
+        // Return the normal of every edge of the polygon
         Node[] axes = new Node[nodes.length];
-        Node vector = new Node(0,0);
         for(int i = 0; i < nodes.length; i++) {
-            vector.x = nodes[i].x - nodes[i+1==nodes.length ? 0:i+1].x;
-            vector.y = nodes[i].y - nodes[i+1==nodes.length ? 0:i+1].y;
+            // Get the vector of the edge
+            Node vector = new Node(nodes[i].x - nodes[i+1==nodes.length ? 0:i+1].x,
+                    nodes[i].y - nodes[i+1==nodes.length ? 0:i+1].y);
+            // Get the normal of the unit vector of the edge
             axes[i] = vector.normal().normalize();
         }
         return axes;
     }
 
     public Node getNode(int i, Node axis) {
+        // Get node at index i
         return nodes[i];
     }
 
     public int getNumOfNodes() {
+        // Get the number of nodes in the Polygon
         return nodes.length;
     }
 }
