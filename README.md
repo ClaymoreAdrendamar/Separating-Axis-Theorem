@@ -1,3 +1,4 @@
 # Separating-Axis-Theorem
-A Java implementation of the Separating Axis Theorem (Works with circles and polygons)
-The Python version is under way as well as a tutorial explaining how this works.
+A Java and Python implementation of the Separating Axis Theorem (Works with circles and polygons)
+
+A generic Separation Axis Theorem that works with any convex polygon inclding circles!
